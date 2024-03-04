@@ -1,15 +1,21 @@
+import { CORE_CONCEPTS } from './data.js';
+import Header from './components/Header.jsx';
+import Core from './components/Core.jsx';
+
 function App() {
   return (
     <div>
-      <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-        <h1>React Essentials</h1>
-        <p>
-          Fundamental React concepts you will need for almost any app you are
-          going to build!
-        </p>
-      </header>
+      <Header/>
       <main>
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            <Core {...CORE_CONCEPTS[0]}/>
+            <Core {...CORE_CONCEPTS[1]}/>
+            <Core {...CORE_CONCEPTS[2]}/>
+            <Core {...CORE_CONCEPTS[3]}/>
+          </ul>
+        </section>
         <h2>Time to get started!</h2>
       </main>
     </div>
